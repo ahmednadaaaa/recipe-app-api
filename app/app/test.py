@@ -1,0 +1,15 @@
+# tests.py
+"""
+Sample tests
+"""
+
+from django.test import SimpleTestCase
+from app import calc  # استدعاء الملف اللي فيه الدالة اللي هنختبرها
+
+class CalcTests(SimpleTestCase):
+    """Test the calc module"""
+
+    def test_add_numbers(self):
+        """Test adding numbers together"""
+        result = calc.add(5, 6)
+        self.assertEqual(result, 11)
